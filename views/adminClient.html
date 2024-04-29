@@ -1,42 +1,90 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examples of Admin REST API</title>
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+hr {
+    margin: 20px 0;
+}
+.api-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+.api-links a:hover {
+    color: #0056b3;
+}
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+</style>
 </head>
 <body>
 
-<h1 style="width: 100%; text-align: center;">Examples of Admin REST API</h1>
-<hr/>
+<div class="container">
+    <h1>Examples of Admin REST API</h1>
+    <div class="api-links">
+        <a href="/adminApi?api=realmsList">Realms list</a>
+        <hr>
+        <a href="/adminApi?api=usersList">Users list for CAMPAIGN_REALM</a>
+        <br><br>
+        <a href="/adminApi?api=createTestUser">Create user login=test_user, password=test_user</a>
+        <br><br>
+        <a href="/adminApi?api=deleteTestUser">Delete user login=test_user</a>
+        <br><br>
+        <a href="/adminApi?api=getUserById">Get user login=test_user by id</a>
+        <br><br>
+        <a href="/adminApi?api=updateTestUser">Update user login=test_user</a>
+        <hr>
+        <a href="/adminApi?api=setTestUserCustomerId">Set a custom attribute customerId=123 for user login=test_user</a>
+        <br><br>
+        <a href="/adminApi?api=removeTestUserCustomerId">Remove a custom attribute customerId for user login=test_user </a>
+        <hr>
+        <a href="/adminApi?api=createRole">Create Role TEST_ROLE</a>
+        <br><br>
+        <a href="/adminApi?api=deleteRole">Delete TEST_ROLE</a>
+        <br><br>
+        <a href="/adminApi?api=addTestRoleToTestUser">Add TEST_ROLE to a user login=test_user</a>
+        <br><br>
+        <a href="/adminApi?api=removeTestRoleFromTestUser">Remove TEST_ROLE from a user login=test_user</a>
+        <hr>
+        <a href="/index.html">Back to login page</a>
+    </div>
+    <div class="result">
+        <h2>Result</h2>
+        <pre>{{result}}</pre>
+    </div>
+</div>
 
-<div>
-    <a href="/adminApi?api=realmsList">Realms list</a>
-    <hr>
-    <a href="/adminApi?api=usersList">Users list for CAMPAIGN_REALM</a>
-    <br><br>
-    <a href="/adminApi?api=createTestUser">Create user login=test_user, password=test_user</a>
-    <br><br>
-    <a href="/adminApi?api=deleteTestUser">Delete user login=test_user</a>
-    <br><br>
-    <a href="/adminApi?api=getUserById">Get user login=test_user by id</a>
-    <br><br>
-    <a href="/adminApi?api=updateTestUser">Update user login=test_user</a>
-    <hr>
-    <a href="/adminApi?api=setTestUserCustomerId">Set a custom attribute customerId=123 for user login=test_user</a>
-    <br><br>
-    <a href="/adminApi?api=removeTestUserCustomerId">Remove a custom attribute customerId for user login=test_user </a>
-    <hr>
-    <a href="/adminApi?api=createRole">Create Role TEST_ROLE</a>
-    <br><br>
-    <a href="/adminApi?api=deleteRole">Delete TEST_ROLE</a>
-    <br><br>
-    <a href="/adminApi?api=addTestRoleToTestUser">Add TEST_ROLE to a user login=test_user</a>
-    <br><br>
-    <a href="/adminApi?api=removeTestRoleFromTestUser">Remove TEST_ROLE from a user login=test_user</a>
-    <hr>
-    <a href="/index.html">Back to login page</a>
-</div>
-<div class="content">
-    <h2>Result</h2>
-    <pre>{{result}}</pre>
-</div>
+<!-- Bootstrap JS and dependencies CDN (optional, if you need JavaScript functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

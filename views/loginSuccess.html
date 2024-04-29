@@ -1,36 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Success login</title>
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    color: #0056b3;
+}
+button {
+    margin-top: 20px;
+}
+</style>
 </head>
 <body>
 
-<h1 style="width: 100%; text-align: center;">Success login <br> user: {{userLogin}}</h1>
-<a href="/campaigns">GET /campaigns</a>
-<br><br>
-<a href="/campaigns/123">GET /campaigns/123</a>
-<br><br>
-<a href="/customers">GET /customers</a>
-<br><br>
-<a href="/reports">GET /reports</a>
-<br><br>
-<a href="/reports/123">GET /reports/123</a>
-<br><br>
-<form action="/campaigns" method="post">
-    <button type="submit">POST /campaigns (admin_user, advertiser_user only)</button>
-</form>
+<div class="container">
+    <h1>Success login</h1>
+    <h2>User: {{userLogin}}</h2>
+    <a href="/campaigns">GET /campaigns</a>
+    <a href="/campaigns/123">GET /campaigns/123</a>
+    <a href="/customers">GET /customers</a>
+    <a href="/reports">GET /reports</a>
+    <a href="/reports/123">GET /reports/123</a>
+    <form action="/campaigns" method="post">
+        <button type="submit">POST /campaigns (admin_user, advertiser_user only)</button>
+    </form>
+    <form action="/customers" method="post">
+        <button type="submit">POST /customers (admin_user, advertiser_user only)</button>
+    </form>
+    <form action="/reports" method="post">
+        <button type="submit">POST /reports (analyst_user only)</button>
+    </form>
+    <a href="/permissions">Get list of all permissions</a>
+    <a href="/checkPermission">Check "create a customer" permission for the current user (res:customer, scopes:create)</a>
+    <a href="/logout">Logout</a>
+</div>
 
-<form action="/customers" method="post">
-    <button type="submit">POST /customers (admin_user, advertiser_user only)</button>
-</form>
+<!-- Bootstrap JS and dependencies CDN (optional, if you need JavaScript functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.min.js"></script>
 
-<form action="/reports" method="post">
-    <button type="submit">POST /reports (analyst_user only)</button>
-</form>
-
-<a href="/permissions">Get list of all permissions</a>
-<br><br>
-<a href="/checkPermission">Check "create a customer" permission for the current user (res:customer, scopes:create)</a>
-<br><br>
-
-<a href="/logout">Logout</a>
 </body>
 </html>
