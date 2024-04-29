@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-control {
+    margin-bottom: 10px;
+}
+.btn-login {
+    width: 100%;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-login:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-logout {
+    width: 100%;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-logout:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+.quick-login-links {
+    margin-top: 20px;
+}
+.quick-login-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #28a745;
+}
+.quick-login-link:hover {
+    color: #218838;
+}
+.admin-api-link {
+    display: block;
+    margin-top: 20px;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+.admin-api-link:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="form-title">Login</h2>
+    <form action="login">
+        <div class="mb-3">
+            <label for="login" class="form-label">Login:</label>
+            <input id="login" name="login" type="text" class="form-control" value="analyst_user">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input id="password" name="password" type="password" class="form-control" value="analyst_user">
+        </div>
+        <button type="submit" class="btn btn-primary btn-login">Login</button>
+    </form>
+    <a href="/logout" class="btn btn-danger btn-logout">Logout</a>
+    <div class="quick-login-links">
+        <h3>Quick Login Links</h3>
+        <a href="/login?login=admin_user&password=admin_user" class="quick-login-link">Admin User</a>
+        <a href="/login?login=advertiser_user&password=advertiser_user" class="quick-login-link">Advertiser User</a>
+        <a href="/login?login=analyst_user&password=analyst_user" class="quick-login-link">Analyst User</a>
+    </div>
+    <a href="/adminClient" class="btn btn-info admin-api-link">Examples of Admin REST API</a>
+</div>
+
+<!-- Bootstrap JS and dependencies CDN (optional, if you need JavaScript functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
