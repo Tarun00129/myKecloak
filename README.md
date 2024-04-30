@@ -28,12 +28,12 @@ OR
 
 ## Setup Administrator Panel
 
-Realm: `company-services`;
-Client: `movies-app`;
-Client Roles: `MOVIES_M9ANAGER` and `USER`;
-Two users (During creation of `users` must add `email`, `firstname`, `lastname`) ### it is important step;
-`admin`: with roles `MANAGE_MOVIES` and `USER`;
-`user`: only with role `USER`;
+- Realm: `company-services`;
+- Client: `movies-app`;
+- Client Roles: `MOVIES_M9ANAGER` and `USER`;
+- Two users (During creation of `users` must add `email`, `firstname`, `lastname`) ### it is important step;
+- `admin`: with roles `MANAGE_MOVIES` and `USER`;
+- `user`: only with role `USER`;
 
 
 ### Movies API's
