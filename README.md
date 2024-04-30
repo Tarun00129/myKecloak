@@ -1,13 +1,16 @@
-## Initialize keycloak:24.0.2
+## Initialize keycloak:24.0.2 with Node JS 18.18.2
 
-In a terminal and inside `node-movies-api` root folder run
+for Installation keycloack go to the keycloak official website hear https://www.keycloak.org/getting-started/getting-started-zip
 
-This script will:
+and creat a admin user with a secure password make sure you can always remember that it is a important step.
+
+then follow these steps to configure you keycloak
+
 - create `company-services` realm;
 - disable the required action `Verify Profile`;
-- create `movies-app` client; If Client authentication in Capability config enable then
+- create `movies-app` client; ## If Client authentication in Capability config enable then
 -- and "directAccessGrantsEnabled": true,
--- "publicClient": true,
+-- "publicClient": true, ## it is default enable in version 24.0.0 and above
 -- Valid redirect URIs: `http://localhost:3000/*`
 - create the client role `MOVIES_USER` for the `movies-app` client;
 - create the client role `MOVIES_ADMIN` for the `movies-app` client;
@@ -28,7 +31,7 @@ OR
 Realm: `company-services`
 Client: `movies-app`
 Client Roles: `MOVIES_MANAGER` and `USER`
-Two users (During creation of `users` must add `email`, `firstname`, `lastname`)
+Two users (During creation of `users` must add `email`, `firstname`, `lastname`) ### it is important step
 `admin`: with roles `MANAGE_MOVIES` and `USER`
 `user`: only with role `USER`
 
