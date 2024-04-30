@@ -28,12 +28,12 @@ OR
 
 ## Setup Administrator Panel
 
-Realm: `company-services`
-Client: `movies-app`
-Client Roles: `MOVIES_MANAGER` and `USER`
-Two users (During creation of `users` must add `email`, `firstname`, `lastname`) ### it is important step
-`admin`: with roles `MANAGE_MOVIES` and `USER`
-`user`: only with role `USER`
+-Realm: `company-services`
+-Client: `movies-app`
+-Client Roles: `MOVIES_MANAGER` and `USER`
+-Two users (During creation of `users` must add `email`, `firstname`, `lastname`) ### it is important step
+-`admin`: with roles `MANAGE_MOVIES` and `USER`
+-`user`: only with role `USER`
 
 
 ### Movies API's
@@ -171,7 +171,9 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "username=user" \
   -d "password=user" \
   -d "grant_type=password" \
-  -d "client_id=movies-app"
+  -d "client_id=movies-app"\
+  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+
 
 // Then execute 2nd curl
 curl -X DELETE -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/movies/{imdbId}
@@ -183,7 +185,8 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "username=admin" \
   -d "password=admin" \
   -d "grant_type=password" \
-  -d "client_id=movies-app"
+  -d "client_id=movies-app"\
+  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
 
 // Then execute 2nd curl
 curl -X DELETE -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/movies/{imdbId}
@@ -200,7 +203,8 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "username=user" \
   -d "password=user" \
   -d "grant_type=password" \
-  -d "client_id=movies-app"
+  -d "client_id=movies-app"\
+  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
 
 // Then execute 2nd curl
 curl -X DELETE -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/movies/{imdbId}
@@ -212,7 +216,9 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "username=admin" \
   -d "password=admin" \
   -d "grant_type=password" \
-  -d "client_id=movies-app"
+  -d "client_id=movies-app" \
+  -d "client_id=movies-app"\
+  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
 
 // Then execute 2nd curl
 curl -X POST -H "Authorization: Bearer {AccessToken}" -H "Content-Type: application/json" -d '{"text":"Great movie!"}' http://localhost:9080/api/movies/{imdbId}/comments
