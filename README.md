@@ -75,7 +75,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=user" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/userextras/me
@@ -89,7 +89,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=admin" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq" | jq -r .access_token
+  -d "client_secret=YourClintSecret" | jq -r .access_token
 
 // Then execute 2nd curl
 curl -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/userextras/me
@@ -111,7 +111,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=user" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X POST -H "Authorization: Bearer {AccessToken}" -H "Content-Type: application/json" -d '{"avatar":"newAvatarUrl"}' http://localhost:9080/api/userextras/me
@@ -142,7 +142,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=user" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X POST -H "Authorization: Bearer {AccessToken}" -H "Content-Type: application/json" -d '{"title":"New Movie", "director":"Director Name"}' http://localhost:9080/api/movies
@@ -156,7 +156,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=admin" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X POST -H "Authorization: Bearer {AccessToken}" -H "Content-Type: application/json" -d '{"title":"New Movie", "director":"Director Name"}' http://localhost:9080/api/movies
@@ -176,7 +176,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=user" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 
 // Then execute 2nd curl
@@ -190,7 +190,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=admin" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X DELETE -
@@ -210,7 +210,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "password=user" \
   -d "grant_type=password" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X DELETE -H "Authorization: Bearer {AccessToken}" http://localhost:9080/api/movies/{imdbId}
@@ -224,7 +224,7 @@ curl -s -X POST "http://localhost:8080/realms/company-services/protocol/openid-c
   -d "grant_type=password" \
   -d "client_id=movies-app" \
   -d "client_id=movies-app" \
-  -d "client_secret=ibWahUjNqDOmRQYo5IqA4PUJpLGJ4NBq"
+  -d "client_secret=YourClintSecret"
 
 // Then execute 2nd curl
 curl -X POST -H "Authorization: Bearer {AccessToken}" -H "Content-Type: application/json" -d '{"text":"Great movie!"}' http://localhost:9080/api/movies/{imdbId}/comments
