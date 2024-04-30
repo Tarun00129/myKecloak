@@ -1,10 +1,10 @@
 {
-  "realm": "CAMPAIGN_REALM",
+  "realm": "company-services",
   "auth-server-url": "http://localhost:8080/",
   "ssl-required": "external",
-  "resource": "CAMPAIGN_CLIENT",
+  "resource": "movies-app",
   "credentials": {
-    "secret": "62oWCCJOpDBGeHcxor9K3IpNcKQJX8Di"
+    "secret": "8HJObAlyYznG8zHdemP4AyJlsiNNa1qt"
   },
   "confidential-port": 0,
   "policy-enforcer": {}
